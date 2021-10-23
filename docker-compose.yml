@@ -1,6 +1,6 @@
 version: "3.2"
 services:
-  docs:
+  apache:
     build:
       context: .
       dockerfile: Dockerfile
@@ -8,4 +8,4 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./:/app
+      - ./public_html/:/usr/local/apache2/htdocs/
